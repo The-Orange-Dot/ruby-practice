@@ -10,13 +10,21 @@
 
   <div>
     <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
+    <%= form.text_area :body, cols: 80, rows: 20%><br>
     <% articles.errors.full_messages_for(:body).each do |msg| %>
       <div><%= msg %></div>
     <% end %>
   </div>
 
   <div>
+  <%= form.label :status %><br>
+  <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+  </div>
+  <br>
+  <div>
     <%= form.submit %>
   </div>
+  <br>
+  <%= link_to "Home", articles_path %>
+
 <% end %>
