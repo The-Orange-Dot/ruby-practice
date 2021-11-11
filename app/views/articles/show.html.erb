@@ -8,17 +8,10 @@
   <li><%= link_to "Delete", article_path(@articles), method: :delete, data: {confirm: "Are you sure?"} %></li>
 </ul>
 
+<h2>Comments</h2>
+<%= render @articles.comments %>
+
 <h2>Add a comment</h2>
-<%= form_with model: [ @articles, @articles.comments.build ] do |form|%>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter%>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_field :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<%= render 'comments/form' %>
+
+<%= link_to "Home", articles_path %>
