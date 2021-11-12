@@ -1,3 +1,27 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+  background-color: #f6fff8;
+  margin: 0;
+}
+
+#header-container {
+  height: 200px;
+  background-color: #246A73;
+}
+
+#header {
+  color: #f6fff8;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3.5em;
+  margin: 0;
+  padding-left: 30px;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+}
+

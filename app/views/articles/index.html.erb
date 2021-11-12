@@ -1,15 +1,29 @@
-<h1>Orange Rails Blog Tutorial</h1>
 
-This blog has <%= Article.public_count %> articles!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>What am I still doing up?</title>
+</head>
+<body>
 
-<ul>
-  <% @articles.each do |article| %>
-    <% unless article.archived? %>
-      <li>
-        <%= link_to article.title, article %>
-      </li>
+<section id="header-container">
+  <h1 id="header"> What am I still doing up?</h1>
+</section>
+
+<section id="container">
+  <ul>
+    <% @articles.each do |article| %>
+      <% unless article.archived? %>
+        <div>
+          <%= link_to article.title, article %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
-
+  </ul>
+</section>
 <%= link_to "Create new article", new_article_path %>
+</body>
+</html>
